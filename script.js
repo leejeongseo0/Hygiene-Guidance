@@ -20,11 +20,10 @@ const rawPlaces = [
   // ▼ 모든 항목을 적은 예시 (교무1실)
   {
     id: "gyomu1", name: "교무1실", x: 41.8, y: 40.8,
-    target: "책상 표면, 출입문 손잡이",
-    date: "2025-00-00",
+    target: "도어락",
+    date: "2026-09-17",
     photos: [
-      { src: "images/gyomu1-1.jpg", caption: "책상 표면 (배양 48시간)" },
-      { src: "images/gyomu1-2.jpg", caption: "문 손잡이 (배양 48시간)" }
+      { src: "images/gyomu1-1.jpg" },
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
@@ -32,26 +31,151 @@ const rawPlaces = [
   },
 
   // ▼ 위쪽 복도 쪽 방
-  { id: "print",  name: "인쇄실", x: 17.2, y: 40.8, target: "인쇄기 버튼" },
-  { id: "health", name: "보건실", x: 25.0, y: 40.8, target: "침대 난간, 문 손잡이" },
-  { id: "broad",  name: "방송실", x: 32.6, y: 40.8 },
-  { id: "duty",   name: "당직실", x: 49.2, y: 40.8 },
+  { id: "print",  name: "인쇄실", x: 17.2, y: 40.8, target: "-" 
+    date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+   
+   { id: "health", name: "보건실", x: 25.0, y: 40.8, target: "-"
+    date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
 
-  // ▼ 오른쪽 방
-  { id: "admin",     name: "행정실",     x: 64.6, y: 61.2 },
-  { id: "av",        name: "시청각실",   x: 64.6, y: 71.5 },
-  { id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "수도꼭지" },
+{ id: "broad",  name: "방송실", x: 32.6, y: 40.8, target: "-"
+   date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+{ id: "duty",   name: "당직실", x: 49.2, y: 40.8, target: "침대 난간, 문 손잡이"
+   date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+{ id: "box",   name: "복도", x: 46.6, y: 24.7, target: "택배 박스"
+  date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+{ id: "ground", name: "운동장",    x: 26.2, y: 17.2, target: "수도꼭지"
+   date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+// ▼ 오른쪽 방
+  { id: "shoes",        name: "현관",   x: 69.1, y: 49.7, target: "신발장 내빈용 실내화"
+  date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+{ id: "av",        name: "시청각실",   x: 64.6, y: 71.5, target: "-"
+ date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+{ id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "-"
+date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
 
   // ▼ 아래쪽 복도 쪽 방
-  { id: "life",    name: "생활과학실습실", x: 17.1, y: 92.7 },
-  { id: "help",    name: "학습도움실",     x: 27.9, y: 92.7 },
-  { id: "prep",    name: "준비실",         x: 35.3, y: 92.7 },
-  { id: "inquiry", name: "탐구교육1실",    x: 41.4, y: 92.7 },
-  { id: "library", name: "서고",           x: 49.8, y: 92.7 },
+  { id: "prep",    name: "준비실",         x: 35.3, y: 92.7, target: "-"
+  date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
 
-  // ▼ 왼쪽 방
-  { id: "clean",    name: "청소휴게실",     x: 4.7, y: 82.7 },
-   ];
+{ id: "inquiry", name: "탐구교육1실",    x: 41.4, y: 92.7, target: "-"
+  date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+{ id: "high", name: "복도 천장",    x: 40.3, y: 75.8, target: "복도 천장"
+  date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+{ id: "elevator", name: "엘리베이터",    x: 11.4, y: 75.6, target: "-"
+  date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+
+// ▼ 왼쪽 방
+  { id: "clean",    name: "온학습카페",     x: 4.7, y: 50.8, target: "-"
+  date: "2026-09-17",
+    photos: [
+      { src: "images/gyomu1-1.jpg" },
+    ],
+    observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
+    note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
+    example: true
+  },
+];
+
+
 
 // 기본값과 합치기 (보통 수정하지 않아도 됩니다)
 const places = rawPlaces.map((p) => ({ ...DEFAULT, ...p }));
