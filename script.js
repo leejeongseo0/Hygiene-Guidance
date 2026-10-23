@@ -54,6 +54,8 @@ const rawPlaces = [
   { id: "cafe",    name: "온학습카페",     x: 4.7, y: 51.2 },
   { id: "recycle", name: "분리수거장",     x: 4.7, y: 61.8 },
   { id: "studio",  name: "온라인스튜디오", x: 4.7, y: 72.6 }
+
+{ id: "newroom1", name: "시청각실", x: 37.8, y: 66.2 },
 ];
 
 // 기본값과 합치기 (보통 수정하지 않아도 됩니다)
