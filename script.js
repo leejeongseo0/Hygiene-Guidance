@@ -141,3 +141,18 @@ $("map-img").addEventListener("error", () => {
   $("map-img").replaceWith(Object.assign(document.createElement("p"),
     { textContent: "지도 이미지를 찾을 수 없습니다. images 폴더와 파일 이름을 확인하세요.", style: "padding:40px" }));
 });
+
+// 6) 위치 찾기 도우미: 주소 끝에 ?edit 를 붙이면 켜집니다
+if (location.search.includes("edit")) {
+  const tip = document.createElement("div");
+  tip.style.cssText = "position:fixed;left:8px;bottom:8px;background:#222;color:#fff;padding:10px 14px;z-index:20;font-size:16px";
+  tip.textContent = "지도에서 원하는 곳을 클릭하면 x, y 값이 여기에 나타납니다.";
+  document.body.appendChild(tip);
+  mapWrap.addEventListener("click", (e) => {
+    if (e.target.classList.contains("spot")) return;   // 점 위를 누른 경우는 제외
+    const r = mapWrap.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width * 100).toFixed(1);
+    const y = ((e.clientY - r.top) / r.height * 100).toFixed(1);
+    tip.textContent = "x: " + x + ", y: " + y;
+  });
+}
