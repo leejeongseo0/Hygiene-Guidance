@@ -13,7 +13,7 @@ const DEFAULT = {
   photos: [],
   observation: "(예시) 아직 관찰 결과가 입력되지 않았습니다.",
   note: "(예시) 확인되지 않은 예시 정보입니다.",
-  example: true
+  example: false
 };
 
 const rawPlaces = [
@@ -27,7 +27,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
   // ▼ 위쪽 복도 쪽 방
@@ -38,7 +38,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
    
    { id: "health", name: "보건실", x: 25.0, y: 40.8, target: "-"
@@ -48,7 +48,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "broad",  name: "방송실", x: 32.6, y: 40.8, target: "-"
@@ -58,7 +58,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "duty",   name: "당직실", x: 49.2, y: 40.8, target: "침대 난간, 문 손잡이"
@@ -68,7 +68,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "box",   name: "복도", x: 46.6, y: 24.7, target: "택배 박스"
@@ -78,7 +78,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "ground", name: "운동장",    x: 26.2, y: 17.2, target: "수도꼭지"
@@ -88,7 +88,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 // ▼ 오른쪽 방
@@ -99,7 +99,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "av",        name: "시청각실",   x: 64.6, y: 71.5, target: "-"
@@ -109,7 +109,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "-"
@@ -119,7 +119,7 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
   // ▼ 아래쪽 복도 쪽 방
@@ -130,7 +130,7 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "inquiry", name: "탐구교육1실",    x: 41.4, y: 92.7, target: "-"
@@ -140,7 +140,7 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "high", name: "복도 천장",    x: 40.3, y: 75.8, target: "복도 천장"
@@ -150,7 +150,7 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 { id: "elevator", name: "엘리베이터",    x: 11.4, y: 75.6, target: "-"
@@ -160,7 +160,7 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 
 // ▼ 왼쪽 방
@@ -171,7 +171,7 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: true
+    example: false
   },
 ];
 
