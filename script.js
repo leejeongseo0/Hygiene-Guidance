@@ -1,92 +1,75 @@
 /* =====================================================
    ★ 여기만 수정하면 됩니다: 장소 데이터 ★
-   - x, y : 지도 위 버튼 위치 (지도 왼쪽 위가 0%, 오른쪽 아래가 100%)
-   - photos : 사진 파일 경로와 설명 (images 폴더에 사진을 넣으세요)
-   - example : true 이면 "예시 데이터" 표시가 나타납니다. 실제 결과면 false
-   - 장소를 추가하려면 { ... }, 블록을 복사해서 붙여 넣으세요.
+   - x, y : 지도 위 점의 위치 (지도 왼쪽 위가 0%, 오른쪽 아래가 100%)
+   - 적지 않은 항목(target, date, photos 등)은 아래 DEFAULT 값이 자동으로 들어갑니다.
+   - 실제 결과를 입력한 장소는 example: false 를 꼭 적어 주세요.
+   - 장소를 추가하려면 한 줄을 복사해서 붙여 넣고, id는 겹치지 않게 바꾸세요.
    ===================================================== */
-const places = [
+
+// 적지 않은 항목에 자동으로 들어가는 기본값
+const DEFAULT = {
+  target: "(채취 대상을 입력하세요)",
+  date: "2025-00-00",
+  photos: [],
+  observation: "(예시) 아직 관찰 결과가 입력되지 않았습니다.",
+  note: "(예시) 확인되지 않은 예시 정보입니다.",
+  example: true
+};
+
+const rawPlaces = [
+  // ▼ 모든 항목을 적은 예시 (교무1실)
   {
-    id: "office",
-    name: "교무실",
-    x: 17, y: 25,
+    id: "gyomu1", name: "교무1실", x: 41.8, y: 40.8,
     target: "책상 표면, 출입문 손잡이",
     date: "2025-00-00",
     photos: [
-      { src: "images/office-1.jpg", caption: "책상 표면 (배양 48시간)" },
-      { src: "images/office-2.jpg", caption: "문 손잡이 (배양 48시간)" }
+      { src: "images/gyomu1-1.jpg", caption: "책상 표면 (배양 48시간)" },
+      { src: "images/gyomu1-2.jpg", caption: "문 손잡이 (배양 48시간)" }
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
     example: true
   },
-  {
-    id: "class11",
-    name: "1학년 1반",
-    x: 41, y: 25,
-    target: "교탁, 칠판 지우개",
-    date: "2025-00-00",
-    photos: [{ src: "images/class11-1.jpg", caption: "교탁 (배양 48시간)" }],
-    observation: "(예시) 노란색 집락과 작은 흰색 집락이 섞여 있음.",
-    note: "(예시) 아직 확정되지 않은 예시 정보입니다.",
-    example: true
-  },
-  {
-    id: "class12",
-    name: "1학년 2반",
-    x: 63, y: 25,
-    target: "사물함 손잡이",
-    date: "2025-00-00",
-    photos: [],
-    observation: "(예시) 아직 배양 중입니다.",
-    note: "(예시) 사진이 없으면 '사진 준비 중'으로 표시됩니다.",
-    example: true
-  },
-  {
-    id: "health",
-    name: "보건실",
-    x: 85, y: 25,
-    target: "침대 난간, 문 손잡이",
-    date: "2025-00-00",
-    photos: [{ src: "images/health-1.jpg", caption: "침대 난간" }],
-    observation: "(예시) 집락 수가 적고 크기가 작음.",
-    note: "(예시) 확정되지 않은 예시 정보입니다.",
-    example: true
-  },
-  {
-    id: "entrance",
-    name: "현관",
-    x: 17, y: 75,
-    target: "신발장 손잡이",
-    date: "2025-00-00",
-    photos: [{ src: "images/entrance-1.jpg", caption: "신발장 손잡이" }],
-    observation: "(예시) 색과 모양이 다양한 집락이 관찰됨.",
-    note: "(예시) 확정되지 않은 예시 정보입니다.",
-    example: true
-  },
-  {
-    id: "toilet",
-    name: "화장실",
-    x: 41, y: 75,
-    target: "수도꼭지",
-    date: "2025-00-00",
-    photos: [{ src: "images/toilet-1.jpg", caption: "수도꼭지" }],
-    observation: "(예시) 분홍빛 집락이 관찰됨.",
-    note: "(예시) 확정되지 않은 예시 정보입니다.",
-    example: true
-  }
+
+  // ▼ 위쪽 복도 쪽 방
+  { id: "print",  name: "인쇄실", x: 17.2, y: 40.8, target: "인쇄기 버튼" },
+  { id: "health", name: "보건실", x: 25.0, y: 40.8, target: "침대 난간, 문 손잡이" },
+  { id: "broad",  name: "방송실", x: 32.6, y: 40.8 },
+  { id: "duty",   name: "당직실", x: 49.2, y: 40.8 },
+
+  // ▼ 오른쪽 방
+  { id: "wc-top",    name: "화장실(위)", x: 69.6, y: 29.1, target: "수도꼭지" },
+  { id: "admin",     name: "행정실",     x: 64.6, y: 61.2 },
+  { id: "av",        name: "시청각실",   x: 64.6, y: 71.5 },
+  { id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "수도꼭지" },
+
+  // ▼ 아래쪽 복도 쪽 방
+  { id: "life",    name: "생활과학실습실", x: 17.1, y: 92.7 },
+  { id: "help",    name: "학습도움실",     x: 27.9, y: 92.7 },
+  { id: "prep",    name: "준비실",         x: 35.3, y: 92.7 },
+  { id: "inquiry", name: "탐구교육1실",    x: 41.4, y: 92.7 },
+  { id: "library", name: "서고",           x: 49.8, y: 92.7 },
+
+  // ▼ 왼쪽 방
+  { id: "cafe",    name: "온학습카페",     x: 4.7, y: 51.2 },
+  { id: "recycle", name: "분리수거장",     x: 4.7, y: 61.8 },
+  { id: "studio",  name: "온라인스튜디오", x: 4.7, y: 72.6 }
 ];
+
+// 기본값과 합치기 (보통 수정하지 않아도 됩니다)
+const places = rawPlaces.map((p) => ({ ...DEFAULT, ...p }));
 
 /* ===== 아래는 기능 코드입니다 (보통 수정하지 않아도 됩니다) ===== */
 const $ = (id) => document.getElementById(id);
 const mapWrap = $("map-wrap");
 
-// 1) 장소마다 지도 위에 버튼 만들기
+// 1) 장소마다 지도 위에 점 만들기
 places.forEach((place) => {
   const btn = document.createElement("button");
   btn.className = "spot";
-  btn.textContent = place.name;
-  btn.style.left = place.x + "%";   // % 위치라서 지도 크기가 변해도 어긋나지 않음
+  btn.title = place.name;                       // 마우스를 올리면 이름 표시
+  btn.setAttribute("aria-label", place.name);
+  btn.style.left = place.x + "%";               // % 위치라서 지도 크기가 변해도 어긋나지 않음
   btn.style.top = place.y + "%";
   btn.dataset.id = place.id;
   btn.addEventListener("click", () => showPlace(place));
@@ -104,7 +87,7 @@ function showPlace(place) {
   $("info-observation").textContent = place.observation;
   $("info-note").textContent = place.note;
 
-  // 선택된 버튼 색 바꾸기
+  // 선택된 점 색 바꾸기
   document.querySelectorAll(".spot").forEach((b) =>
     b.classList.toggle("active", b.dataset.id === place.id));
 
