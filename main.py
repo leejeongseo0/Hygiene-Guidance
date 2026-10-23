@@ -1,4 +1,58 @@
-import streamlit as st
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>우리 학교 위생맵</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>우리 학교 위생맵</h1>
+    <p>1층 곳곳에서 채취한 미생물의 배양 결과입니다. 지도에서 장소를 눌러 보세요.</p>
+  </header>
 
-st.title("첫 배포 확인 👋")
-st.write("여기까지 보이면 배포 성공입니다.")
+  <main class="layout">
+    <!-- 지도 영역 -->
+    <section class="map-area" aria-label="학교 1층 평면도">
+      <!-- 평면도 이미지: 실제 이미지로 바꾸려면 src의 파일 이름만 수정하세요 -->
+      <div class="map-wrap" id="map-wrap">
+        <img id="map-img" src="images/floorplan.svg" alt="학교 1층 평면도">
+        <!-- 장소 버튼은 script.js가 자동으로 여기에 만들어 줍니다 -->
+      </div>
+      <p class="map-note">* 현재 지도는 임시 평면도이며, 정보는 모두 예시입니다.</p>
+    </section>
+
+    <!-- 정보 패널 -->
+    <aside class="info-panel" id="info-panel" aria-live="polite">
+      <div id="info-empty" class="info-empty">지도에서 장소를 누르면<br>배양 사진과 관찰 결과가 여기에 나타납니다.</div>
+
+      <div id="info-content" hidden>
+        <button id="close-btn" class="close-btn" aria-label="정보 닫기">닫기 ✕</button>
+        <h2 id="info-name"></h2>
+        <p id="info-example" class="badge" hidden>예시 데이터</p>
+        <dl>
+          <dt>채취 대상</dt><dd id="info-target"></dd>
+          <dt>채취 일자</dt><dd id="info-date"></dd>
+        </dl>
+        <h3>배양 사진</h3>
+        <div id="info-photos" class="photos"></div>
+        <h3>관찰 결과 및 특징</h3>
+        <p id="info-observation"></p>
+        <h3>참고 사항</h3>
+        <p id="info-note"></p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 사진 확대 창 -->
+  <div id="lightbox" class="lightbox" hidden>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <footer class="site-footer">관찰된 외형 특징만 기록하며, 미생물의 종류나 유해성은 확인되지 않았습니다.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
