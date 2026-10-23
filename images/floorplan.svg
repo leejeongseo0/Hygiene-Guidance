@@ -1,0 +1,15 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="26" text-anchor="middle">
+  <rect width="1000" height="600" fill="#fafaf7"/>
+  <g fill="#e4f0ee" stroke="#1f5f5b" stroke-width="3">
+    <rect x="40" y="40" width="260" height="220"/><rect x="300" y="40" width="220" height="220"/>
+    <rect x="520" y="40" width="220" height="220"/><rect x="740" y="40" width="220" height="220"/>
+    <rect x="40" y="340" width="260" height="220"/><rect x="300" y="340" width="220" height="220"/>
+    <rect x="520" y="340" width="220" height="220" fill="#eee"/><rect x="740" y="340" width="220" height="220" fill="#eee"/>
+  </g>
+  <rect x="40" y="260" width="920" height="80" fill="#f1ede2"/>
+  <g fill="#1f5f5b">
+    <text x="170" y="110">교무실</text><text x="410" y="110">1학년 1반</text><text x="630" y="110">1학년 2반</text><text x="850" y="110">보건실</text>
+    <text x="170" y="410">현관</text><text x="410" y="410">화장실</text>
+  </g>
+  <g fill="#777"><text x="630" y="410">계단</text><text x="850" y="410">창고</text><text x="500" y="308" font-size="22">복도 (임시 평면도)</text></g>
+</svg>
