@@ -38,7 +38,6 @@ const rawPlaces = [
   { id: "duty",   name: "당직실", x: 49.2, y: 40.8 },
 
   // ▼ 오른쪽 방
-  { id: "wc-top",    name: "화장실(위)", x: 69.6, y: 29.1, target: "수도꼭지" },
   { id: "admin",     name: "행정실",     x: 64.6, y: 61.2 },
   { id: "av",        name: "시청각실",   x: 64.6, y: 71.5 },
   { id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "수도꼭지" },
@@ -51,12 +50,13 @@ const rawPlaces = [
   { id: "library", name: "서고",           x: 49.8, y: 92.7 },
 
   // ▼ 왼쪽 방
-  { id: "cafe",    name: "온학습카페",     x: 4.7, y: 51.2 },
-  { id: "recycle", name: "분리수거장",     x: 4.7, y: 61.8 },
-  { id: "studio",  name: "온라인스튜디오", x: 4.7, y: 72.6 }
-
+  { id: "clean",    name: "청소휴게실",     x: 4.7, y: 82.7 },
+  
 { id: "newroom1", name: "시청각실", x: 37.8, y: 66.2 },
-];
+{ id: "newroom2", name: "당직실", x: 49.9, y: 34.1 },
+   
+   
+   ];
 
 // 기본값과 합치기 (보통 수정하지 않아도 됩니다)
 const places = rawPlaces.map((p) => ({ ...DEFAULT, ...p }));
