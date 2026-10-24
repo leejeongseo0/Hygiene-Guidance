@@ -31,7 +31,7 @@ const rawPlaces = [
   },
 
   // ▼ 위쪽 복도 쪽 방
-  { id: "print",  name: "인쇄실", x: 17.2, y: 40.8, target: "-" 
+  { id: "print",  name: "인쇄실", x: 17.2, y: 40.8, target: "-" ,
     date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -41,7 +41,7 @@ const rawPlaces = [
     example: false
   },
    
-   { id: "health", name: "보건실", x: 25.0, y: 40.8, target: "-"
+   { id: "health", name: "보건실", x: 25.0, y: 40.8, target: "-",
     date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -51,7 +51,7 @@ const rawPlaces = [
     example: false
   },
 
-{ id: "broad",  name: "방송실", x: 32.6, y: 40.8, target: "-"
+{ id: "broad",  name: "방송실", x: 32.6, y: 40.8, target: "-",
    date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -61,7 +61,7 @@ const rawPlaces = [
     example: false
   },
 
-{ id: "duty",   name: "당직실", x: 49.2, y: 40.8, target: "침대 난간, 문 손잡이"
+{ id: "duty",   name: "당직실", x: 49.2, y: 40.8, target: "침대 난간, 문 손잡이",
    date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -71,7 +71,7 @@ const rawPlaces = [
     example: false
   },
 
-{ id: "box",   name: "복도", x: 46.6, y: 24.7, target: "택배 박스"
+{ id: "box",   name: "복도", x: 46.6, y: 24.7, target: "택배 박스",
   date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -81,7 +81,7 @@ const rawPlaces = [
     example: false
   },
 
-{ id: "ground", name: "운동장",    x: 26.2, y: 17.2, target: "수도꼭지"
+{ id: "ground", name: "운동장",    x: 26.2, y: 17.2, target: "수도꼭지",
    date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -92,7 +92,7 @@ const rawPlaces = [
   },
 
 // ▼ 오른쪽 방
-  { id: "shoes",        name: "현관",   x: 69.1, y: 49.7, target: "신발장 내빈용 실내화"
+  { id: "shoes",        name: "현관",   x: 69.1, y: 49.7, target: "신발장 내빈용 실내화",
   date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -102,7 +102,7 @@ const rawPlaces = [
     example: false
   },
 
-{ id: "av",        name: "시청각실",   x: 64.6, y: 71.5, target: "-"
+{ id: "av",        name: "시청각실",   x: 64.6, y: 71.5, target: "-",
  date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -112,7 +112,7 @@ const rawPlaces = [
     example: false
   },
 
-{ id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "-"
+{ id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "-",
 date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -123,7 +123,7 @@ date: "2026-09-17",
   },
 
   // ▼ 아래쪽 복도 쪽 방
-  { id: "prep",    name: "준비실",         x: 35.3, y: 92.7, target: "-"
+  { id: "prep",    name: "준비실",         x: 35.3, y: 92.7, target: "-",
   date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -133,7 +133,7 @@ date: "2026-09-17",
     example: false
   },
 
-{ id: "inquiry", name: "탐구교육1실",    x: 41.4, y: 92.7, target: "-"
+{ id: "inquiry", name: "탐구교육1실",    x: 41.4, y: 92.7, target: "-",
   date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -143,7 +143,7 @@ date: "2026-09-17",
     example: false
   },
 
-{ id: "high", name: "복도 천장",    x: 40.3, y: 75.8, target: "복도 천장"
+{ id: "high", name: "복도 천장",    x: 40.3, y: 75.8, target: "복도 천장",
   date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -153,7 +153,7 @@ date: "2026-09-17",
     example: false
   },
 
-{ id: "elevator", name: "엘리베이터",    x: 11.4, y: 75.6, target: "-"
+{ id: "elevator", name: "엘리베이터",    x: 11.4, y: 75.6, target: "-",
   date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
@@ -164,7 +164,7 @@ date: "2026-09-17",
   },
 
 // ▼ 왼쪽 방
-  { id: "clean",    name: "온학습카페",     x: 4.7, y: 50.8, target: "-"
+  { id: "clean",    name: "온학습카페",     x: 4.7, y: 50.8, target: "-",
   date: "2026-09-17",
     photos: [
       { src: "images/gyomu1-1.jpg" },
