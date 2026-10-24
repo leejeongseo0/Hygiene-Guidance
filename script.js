@@ -220,12 +220,12 @@ function showPlace(place) {
     const fig = document.createElement("figure");
     const img = document.createElement("img");
     img.src = p.src;
-    img.alt = place.name + " 배양 사진: " + p.caption;
+        img.alt = place.name + " 배양 사진: " + (p.caption || "");
     img.addEventListener("click", () => openLightbox(p));
     // 사진 파일이 없거나 경로가 틀리면 '사진 준비 중' 칸으로 바꿈
     img.addEventListener("error", () => img.replaceWith(missingBox()));
     const cap = document.createElement("figcaption");
-    cap.textContent = p.caption;
+        cap.textContent = p.caption || "";
     fig.append(img, cap);
     box.appendChild(fig);
   });
@@ -251,7 +251,7 @@ $("close-btn").addEventListener("click", () => {
 // 4) 사진 확대 / 닫기 (아무 곳이나 누르면 닫힘, Esc 키도 가능)
 function openLightbox(p) {
   $("lightbox-img").src = p.src;
-  $("lightbox-caption").textContent = p.caption;
+    $("lightbox-caption").textContent = p.caption || "";
   $("lightbox").hidden = false;
 }
 $("lightbox").addEventListener("click", () => ($("lightbox").hidden = true));
