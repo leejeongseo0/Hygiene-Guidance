@@ -105,7 +105,7 @@ const rawPlaces = [
 { id: "av",        name: "시청각실",   x: 64.6, y: 71.5, target: "-",
  date: "2026-09-17",
     photos: [
-      { src: "images/gyomu1-1.jpg" },
+      { src: "images/see1.png", "images/see2.png" },
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
