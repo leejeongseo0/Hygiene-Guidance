@@ -64,7 +64,9 @@ const rawPlaces = [
 { id: "duty",   name: "당직실", x: 49.2, y: 40.8, target: "침대 난간, 문 손잡이",
    date: "2026-09-17",
     photos: [
-      { src: "images/gyomu1-1.jpg" },
+      { src: "images/duty1.png" },
+     { src: "images/duty2.jpg" }
+
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
