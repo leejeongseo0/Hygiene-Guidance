@@ -73,7 +73,7 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
      level: "bad",
 
 },
@@ -229,7 +229,8 @@ const mapWrap = $("map-wrap");
 // 1) 장소마다 지도 위에 점 만들기
 places.forEach((place) => {
   const btn = document.createElement("button");
-  btn.className = "spot " + (place.level || "none");   // 등급(bad/mid/good)에 따라 색이 정해짐  btn.title = place.name;                       // 마우스를 올리면 이름 표시
+  btn.className = "spot " + (place.level || "none");   // 등급(bad/mid/good)에 따라 색이 정해짐  
+  btn.title = place.name;                       // 마우스를 올리면 이름 표시
   btn.setAttribute("aria-label", place.name);
   btn.style.left = place.x + "%";               // % 위치라서 지도 크기가 변해도 어긋나지 않음
   btn.style.top = place.y + "%";
