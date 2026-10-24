@@ -173,7 +173,7 @@ date: "2026-09-17",
 
   },
 
-{ id: "high", name: "복도 천장",    x: 40.3, y: 75.8, target: "복도 천장",
+{ id: "high", name: "복도",    x: 40.3, y: 75.8, target: "복도 천장",
   date: "2026-09-17",
     photos: [
       { src: "images/high1.png" },
