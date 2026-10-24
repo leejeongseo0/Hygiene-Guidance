@@ -36,12 +36,13 @@ const rawPlaces = [
     photos: [
       { src: "images/print1.png" },
          { src: "images/print2.jpg" }
-
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
-  },
+    example: false,
+     level: "mid"
+
+},
    
    { id: "health", name: "보건실", x: 25.0, y: 40.8, target: "-",
     date: "2026-09-17",
@@ -73,7 +74,9 @@ const rawPlaces = [
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
     example: false
-  },
+     level: "bad",
+
+},
 
 { id: "box",   name: "복도", x: 46.6, y: 24.7, target: "택배 박스",
   date: "2026-09-17",
@@ -84,7 +87,9 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+     level: "bad"
+
   },
 
 { id: "ground", name: "운동장",    x: 26.2, y: 17.2, target: "수도꼭지",
@@ -96,7 +101,9 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+      level: "mid"
+
   },
 
 // ▼ 오른쪽 방
@@ -109,7 +116,9 @@ const rawPlaces = [
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+        level: "bad"
+
   },
 
 { id: "av",        name: "시청각실",   x: 64.6, y: 71.5, target: "-",
@@ -120,7 +129,9 @@ const rawPlaces = [
 ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+      level: "good"
+
   },
 
 { id: "wc-bottom", name: "화장실(아래)", x: 69.6, y: 80.7, target: "-",
@@ -143,7 +154,9 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+        level: "mid"
+
   },
 
 { id: "inquiry", name: "탐구교육1실",    x: 41.4, y: 92.7, target: "키보드",
@@ -155,7 +168,9 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+      level: "bad"
+
   },
 
 { id: "high", name: "복도 천장",    x: 40.3, y: 75.8, target: "복도 천장",
@@ -167,7 +182,9 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+      level: "good"
+
   },
 
 { id: "elevator", name: "엘리베이터",    x: 11.4, y: 75.6, target: "-",
@@ -179,7 +196,9 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+      level: "good"
+
   },
 
 // ▼ 왼쪽 방
@@ -192,7 +211,9 @@ date: "2026-09-17",
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
-    example: false
+    example: false,
+        level: "mid"
+
   },
 ];
 
@@ -208,8 +229,7 @@ const mapWrap = $("map-wrap");
 // 1) 장소마다 지도 위에 점 만들기
 places.forEach((place) => {
   const btn = document.createElement("button");
-  btn.className = "spot";
-  btn.title = place.name;                       // 마우스를 올리면 이름 표시
+  btn.className = "spot " + (place.level || "none");   // 등급(bad/mid/good)에 따라 색이 정해짐  btn.title = place.name;                       // 마우스를 올리면 이름 표시
   btn.setAttribute("aria-label", place.name);
   btn.style.left = place.x + "%";               // % 위치라서 지도 크기가 변해도 어긋나지 않음
   btn.style.top = place.y + "%";
