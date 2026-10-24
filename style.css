@@ -28,15 +28,30 @@ body {
 .map-wrap img { display: block; width: 100%; height: auto; }
 .map-note { font-size: 0.85rem; color: #55706d; margin: 6px 0 0; }
 
+/* 위생 등급별 색 (색을 바꾸고 싶으면 여기 숫자만 수정) */
+:root {
+  --bad: #d32f2f;    /* 위생 나쁨: 빨강 */
+  --mid: #f5c400;    /* 위생 보통: 노랑 */
+  --good: #2e9e4f;   /* 위생 좋음: 초록 */
+  --none: #8a9a98;   /* 아직 판정 안 함: 회색 */
+}
+
 /* 장소 버튼 (작은 동그라미) */
 .spot {
   position: absolute; transform: translate(-50%, -50%);
   width: clamp(16px, 2.6vw, 26px); height: clamp(16px, 2.6vw, 26px);
-  padding: 0; background: var(--accent); border: 2px solid #fff; border-radius: 50%;
+  padding: 0; border: 3px solid #fff; border-radius: 50%;
   cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.45);
 }
+.spot.bad  { background: var(--bad); }
+.spot.mid  { background: var(--mid); }
+.spot.good { background: var(--good); }
+.spot.none { background: var(--none); }
+
 .spot:hover, .spot:focus-visible { outline: 3px solid #222; }
-.spot.active { background: var(--main); outline: 3px solid #222; }
+
+/* 누른 버튼: 색은 그대로, 테두리만 검은색 */
+.spot.active { border-color: #000; box-shadow: 0 0 0 2px #fff, 0 1px 4px rgba(0,0,0,.45); }
 
 /* 정보 패널 */
 .info-panel { background: #fff; border: 1px solid var(--line); padding: 16px; align-self: start; }
