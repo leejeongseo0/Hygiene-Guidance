@@ -97,7 +97,9 @@ const rawPlaces = [
   { id: "shoes",        name: "현관",   x: 69.1, y: 49.7, target: "신발장 내빈용 실내화",
   date: "2026-09-17",
     photos: [
-      { src: "images/gyomu1-1.jpg" },
+      { src: "images/sliper1.png" },
+          { src: "images/sliper2.jpg" },
+
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
