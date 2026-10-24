@@ -98,7 +98,7 @@ const rawPlaces = [
   date: "2026-09-17",
     photos: [
       { src: "images/sliper1.png" },
-          { src: "images/sliper2.jpg" },
+          { src: "images/sliper2.jpg" }
 
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
@@ -132,7 +132,7 @@ date: "2026-09-17",
   date: "2026-09-17",
     photos: [
       { src: "images/ready1.png" },
-         { src: "images/ready2.jpg" },
+         { src: "images/ready2.jpg" }
 
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
@@ -153,7 +153,9 @@ date: "2026-09-17",
 { id: "high", name: "복도 천장",    x: 40.3, y: 75.8, target: "복도 천장",
   date: "2026-09-17",
     photos: [
-      { src: "images/gyomu1-1.jpg" },
+      { src: "images/high1.png" },
+          { src: "images/high2.jpg" }
+
     ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
