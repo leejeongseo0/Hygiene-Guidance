@@ -106,7 +106,7 @@ const rawPlaces = [
  date: "2026-09-17",
    photos: [
   { src: "images/see1.png" },
-  { src: "images/see2.png" }
+  { src: "images/see2.jpg" }
 ],
     observation: "(예시) 흰색의 둥근 집락이 여러 개 관찰됨. 가장자리는 매끈함.",
     note: "(예시) 종류는 확인되지 않았습니다. 외형 관찰만 기록했습니다.",
